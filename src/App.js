@@ -20,10 +20,11 @@ class App extends Component {
     return (
       <div className="app">
         <h1 className="chat-header">Bloc Chat</h1>
-<main>
+
           <RoomList
            firebase= { firebase }/>
-           </main>
+           
+
       </div>
 
 
