@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import * as firebase from 'firebase';
 import RoomList from './components/RoomList';
+import MessageList from './components/MessageList';
+
 
 const config = {
   apiKey: "AIzaSyAYnYVNGsK2aPi3CgLqvv0Vw_b_PtqtlCY",
@@ -16,6 +18,12 @@ firebase.initializeApp(config);
 
 
 class App extends Component {
+  constructor(props){
+    super(props);
+
+
+
+  }
       render() {
     return (
       <div className="app">
@@ -23,7 +31,8 @@ class App extends Component {
 
           <RoomList
            firebase= { firebase }/>
-           
+           <MessageList
+           firebase= { firebase }/>
 
       </div>
 
