@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+
 import * as firebase from 'firebase';
 import RoomList from './components/RoomList';
-import MessageList from './components/MessageList';
-
 
 const config = {
   apiKey: "AIzaSyAYnYVNGsK2aPi3CgLqvv0Vw_b_PtqtlCY",
@@ -16,24 +13,25 @@ const config = {
 };
 firebase.initializeApp(config);
 
+//active room changes every time room is pressed
+//handleRoomSelect()
 
 class App extends Component {
-  constructor(props){
-    super(props);
-
-
-
-  }
       render() {
     return (
       <div className="app">
         <h1 className="chat-header">Bloc Chat</h1>
 
+       <aside>
           <RoomList
            firebase= { firebase }/>
-           <MessageList
-           firebase= { firebase }/>
+</aside>
 
+<main>
+<div id="messagePlane">
+  <h1>Message here</h1>
+</div>
+</main>
       </div>
 
 
